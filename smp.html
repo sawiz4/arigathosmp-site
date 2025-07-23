@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minecraft Server Info</title>
+  <style>
+    body, html {
+      margin: 0; padding: 0; height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+    .bg-slide {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.7);
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+      z-index: -1;
+    }
+    .bg-slide.active {
+      opacity: 1;
+    }
+    .content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 100px 20px 50px;
+    }
+    .content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+    .info-box {
+      background: rgba(0,0,0,0.6);
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      max-width: 400px;
+      box-shadow: 0 0 15px #1db954;
+      font-size: 1.2rem;
+    }
+    .info-box div {
+      margin: 10px 0;
+    }
+    .info-box a {
+      color: #1db954;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .info-box a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ccc;
+      text-shadow: 1px 1px 2px black;
+      z-index: 20;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-slide" style="background-image: url('https://cdn.discordapp.com/attachments/1382410249297854464/1383866714600509573/2025-06-15_23.20.44.png?ex=6881ca0f&is=6880788f&hm=bdc5128bff6430cf747b005439f980640b5c4f9ed15112a70d51bedf14b7fc97&');"></div>
+  <div class="bg-slide" style="background-image: url('https://cdn.discordapp.com/attachments/1382410249297854464/1383866715175256176/2025-06-15_22.55.51.png?ex=6881ca0f&is=6880788f&hm=854fbf9e0746d88804138b6aa96aff627e86ad7e1917c9cf0623a2512ee2963a&');"></div>
+  <div class="bg-slide" style="background-image: url('https://scontent.fcmb8-1.fna.fbcdn.net/v/t1.15752-9/522199543_668660672859838_2414747365040714238_n.png?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=dotHz41dgsAQ7kNvwFClAzb&_nc_oc=AdnfQBPwWLAZgKcefqU3JdWLZC7TSwmxUnXmtZ3uMmCC4m-l2jKQ98l7qqZXzxY4E34Q1h72O1UUP6_jlx3V3pXL&_nc_ad=z-m&_nc_cid=1157&_nc_zt=23&_nc_ht=scontent.fcmb8-1.fna&oh=03_Q7cD2wGktxf-O_nKqDJshYnvOHMbaaRT_I6T8Y34_b2VxKf-CA&oe=68A856E8');"></div>
+  <div class="bg-slide" style="background-image: url('https://cdn.discordapp.com/attachments/1382410249297854464/1382813286340235294/2025-06-13_01.32.52.png?ex=6881e97a&is=688097fa&hm=d070c014ac15ec895b8be59868b6ec37b755e7553b3ebf96e5c417356f33cd12&');"></div>
+
+  <div class="content">
+    <h1>Welcome to Apilage Minecraft Server</h1>
+    <div class="info-box">
+      <div><strong>Server IP:</strong> arigathosmp.aternos.me</div>
+      <div><strong>Server Port:</strong> 45027</div>
+      <div><strong>Join our Discord:</strong> <a href="https://discord.gg/xbMr7k6K" target="_blank" rel="noopener noreferrer">https://discord.gg/xbMr7k6K</a></div>
+    </div>
+  </div>
+
+  <footer>
+    Powered by Sawiz4 & arigatho_xd
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.bg-slide');
+    let current = 0;
+    slides[current].classList.add('active');
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 5000); // change every 5 seconds
+  </script>
+</body>
+</html>
